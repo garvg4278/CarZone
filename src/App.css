@@ -1,0 +1,113 @@
+.header {
+  background-color: #000000;
+  color: #fff;
+  padding: 15px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+
+#CarZone {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.header-nav {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.header-nav li {
+  display: inline;
+}
+
+.header-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  padding: 5px 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Change color & add underline effect on hover */
+.header-nav a:hover {
+  color: #00d0ff; /* A nice golden-yellow effect */
+}
+
+/* Stylish animated underline effect */
+.header-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background-color: #00d0ff;
+  transition: width 0.3s ease-in-out;
+}
+
+.header-nav a:hover::after {
+  width: 100%; /* Expands underline when hovered */
+}
+
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px; /* Adjust to prevent overlap with header */
+}
+
+.main-image {
+  max-width: 90%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.image-container {
+  position: relative;
+  display: flex;
+  justify-content: center; /* Centers the image horizontally */
+  align-items: center; /* Centers the content vertically */
+  width: 100%;
+}
+
+.main-image {
+  max-width: 90%;
+  height: auto;
+  display: block;
+}
+
+.image-text {
+  position: absolute;
+  top: 30%; /* Adjust for better placement */
+  left: 50%;
+  transform: translate(-50%, -30%);
+  text-align: center;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.image-text h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.image-text h2 {
+  font-size: 1.5rem;
+  font-weight: lighter;
+}
